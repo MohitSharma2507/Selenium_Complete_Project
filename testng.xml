@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--        1. Running Multiple Test Classes-->
+<!--<suite name="SauceDemo Test Suite">-->
+<!--    <test name="All Tests">-->
+<!--        <classes>-->
+<!--            <class name="tests.CheckoutFlowTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<!--        2. Running Specific Methods Only-->
+<!--<suite name="SauceDemo Test Suite">-->
+<!--<test name="Selected Tests">-->
+<!--    <classes>-->
+<!--        <class name="tests.LoginTest">-->
+<!--            <methods>-->
+<!--                <include name="testValidLogin"/>-->
+<!--                <include name="testInvalidLogin"/>-->
+<!--                &lt;!&ndash; exclude a method &ndash;&gt;-->
+<!--&lt;!&ndash;                <exclude name="testLockedUser"/>&ndash;&gt;-->
+<!--            </methods>-->
+<!--        </class>-->
+<!--    </classes>-->
+<!--</test>-->
+<!--</suite>-->
+
+<!--<suite name="SauceDemo Test Suite">-->
+<!--    <parameter name="browser" value="chrome"/>-->
+<!--     Run ONLY smoke tests-->
+<!--    <test name="Smoke Tests">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="smoke"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTest"/>-->
+<!--            <class name="tests.CheckoutFlowTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--     Run ONLY regression tests-->
+<!--    <test name="Regression Tests">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="regression"/>-->
+<!--                <exclude name="smoke"/>   &lt;!&ndash; skip smoke in regression run &ndash;&gt;-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTest"/>-->
+<!--            <class name="tests.CheckoutFlowTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<!--<suite name="SauceDemo Test Suite" parallel="methods" thread-count="2">-->
+
+<!--    <test name="Parallel Tests">-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTest"/>-->
+<!--            <class name="tests.CheckoutFlowTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--</suite>-->
+
+<!--<suite name="Cross Browser Suite" parallel="tests" thread-count="2">-->
+<!--   &lt;!&ndash; Run on Chrome &ndash;&gt;-->
+<!--    <test name="Chrome Tests">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTest"/>-->
+<!--            <class name="tests.CheckoutFlowTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    &lt;!&ndash; Run on Firefox &ndash;&gt;-->
+<!--    <test name="Edge Tests">-->
+<!--        <parameter name="browser" value="edge"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTest"/>-->
+<!--            <class name="tests.CheckoutFlowTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<suite name="Data Driven Suite">
+    <test name="Login Data Driven Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+
+</suite>
